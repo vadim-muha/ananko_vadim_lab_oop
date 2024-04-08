@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Vector 
+class Point 
 {
 private:
     double x;
@@ -13,7 +13,7 @@ private:
     string color;
 
 public:
-    Vector(double x_val, double y_val, double z_val, const string& creator_name, const string& color_vector) : x(x_val), y(y_val), z(z_val), creator(creator_name), color(color_vector) {}
+    Point(double x_val, double y_val, double z_val, const string& creator_name, const string& color_point) : x(x_val), y(y_val), z(z_val), creator(creator_name), color(color_point) {}
 
     double getX() const
     {
@@ -54,19 +54,20 @@ public:
     {
         z = z_val;
     }
+    
 };
 
 int main() 
 {
-    Vector vec1(1.0, 2.0, 3.0, "Vasya", "Green");
-    Vector vec2(4.0, 5.0, 6.0, "Peter", "Red"); 
+    Point point1(1.0, 2.0, 3.0, "Vasya", "Green");
+    Point point2(4.0, 5.0, 6.0, "Peter", "Red"); 
 
-    cout << "Vector 1 coordinates (" << vec1.getX() << ", " << vec1.getY() << ", " << vec1.getZ() << ")" << endl;
-    cout << "Vector 2 coordinates (" << vec2.getX() << ", " << vec2.getY() << ", " << vec2.getZ() << ")" << endl;
+    cout << "Point 1 coordinates (" << point1.getX() << ", " << point1.getY() << ", " << point1.getZ() << ")" << endl;
+    cout << "Point 2 coordinates (" << point2.getX() << ", " << point2.getY() << ", " << point2.getZ() << ")" << endl;
 
-    cout << "Vector 1 created by" << " ' "<< vec1.getCreator() << " ', " << "Vector 2 created by" << " ' " << vec2.getCreator() << " ' " << endl;
+    cout << "Point 1 created by ' "<< point1.getCreator() << " ', Point 2 created by ' " << point2.getCreator() << " ' " << endl;
 
-    cout << "Vector 1 color" << " ' " << vec1.getColor() << " ', " << "Vector 2 color" << " ' " << vec2.getColor() << " ' " << endl;
+    cout << "Point 1 color" << " ' " << point1.getColor() << " ', " << "Point 2 color" << " ' " << point2.getColor() << " ' " << endl;
 
     return 0;
 }
