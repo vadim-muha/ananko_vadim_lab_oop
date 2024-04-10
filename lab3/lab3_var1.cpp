@@ -57,14 +57,10 @@ public:
 
 int main() 
 {
-    
     Trapezoid trapezoid1; 
-
     Trapezoid trapezoid2(5.0, 7.0, 4.0);
-
     Trapezoid trapezoid3 = trapezoid2;
 
     cout << "Area of trapezoid 3: " << trapezoid3.calculateArea() << endl;
-
     return 0;
 }
